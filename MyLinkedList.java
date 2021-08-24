@@ -54,6 +54,17 @@ public class MyLinkedList<K> {
         
 
     }
+    public void insertNodeAfter(INode<K> secondNode,INode<K> fourthNode) {
+        INode tempNode = this.head;
+        while (tempNode!= null) {
+            if (tempNode.getKey().equals(secondNode.getKey())) {
+                fourthNode.setNext(tempNode.getNext());
+                tempNode.setNext(fourthNode);
+                break;
+            }
+            tempNode=tempNode.getNext();
+        }
+    }
     public void search(INode<K> searchNode){ //search given element is present or not
         INode tempNode=this.head;
         while (tempNode.getNext()!=null)
