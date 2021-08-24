@@ -38,11 +38,11 @@ public class MyLinkedList<K> {
 
 
     }
- //   public void popFirst(){     //delete first element
- //   	INode temp = head.getNext();
-//		head = temp;
+    public void popFirst(){     //delete first element
+    	INode temp = head.getNext();
+		head = temp;
 
-  //  }
+    }
     
     public void popLast(){    // delete last element
         INode tempNode=this.head;
@@ -52,6 +52,20 @@ public class MyLinkedList<K> {
         }while (tempNode.getNext()==null);
         tempNode.setNext(null);
         
+
+    }
+    public void search(INode<K> searchNode){ //search given element is present or not
+        INode tempNode=this.head;
+        while (tempNode.getNext()!=null)
+        {
+
+            if (tempNode==searchNode)
+            {
+                System.out.println(searchNode.getKey() +" is present in linked list");
+            }
+            tempNode=tempNode.getNext();
+
+        }
 
     }
 
