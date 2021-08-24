@@ -9,7 +9,7 @@ public class MyLinkedList<K> {
     }
 
     public void add(INode<K> newNode) {
-    	if (this.head == null) {
+        if (this.head == null) {
             this.head = newNode;
         }
         if (this.tail == null) {
@@ -26,9 +26,21 @@ public class MyLinkedList<K> {
         }
     }
 
+
+    public void addNodeInBetween(INode<K> myFirstNode,INode<K> mySecondNode)
+    {
+        INode tempNode = this.head;
+       if(tempNode.getKey()!=myFirstNode) {
+           mySecondNode.setNext(tempNode.getNext());
+           tempNode.setNext(mySecondNode);
+       }
+
+
+
+    }
     public void printMyNodes() {
 
-    	StringBuffer myNodes = new StringBuffer("My Nodes: ");
+        StringBuffer myNodes = new StringBuffer("My Nodes: ");
         INode temp = this.head;
         while (temp.getNext()!=null) {
             myNodes.append(temp.getKey());
@@ -39,7 +51,5 @@ public class MyLinkedList<K> {
         System.out.print(myNodes);
 
 
-        
+        }
     }
-
-}
