@@ -6,11 +6,11 @@ public class MyLinkedListRunner {
 		MyNode<Integer> firstNode=new MyNode<Integer>(56);
         MyNode<Integer> secondNode=new MyNode<Integer>(30);
         MyNode<Integer> thirdNode=new MyNode<Integer>(70);
-        firstNode.setNext(secondNode);
-        secondNode.setNext(thirdNode);
-        boolean result = firstNode.getNext().equals(secondNode)&& secondNode.getNext().equals(thirdNode);
-        System.out.println(result);
-
+        MyLinkedList myLinkedList=new MyLinkedList();
+        myLinkedList.add(firstNode);
+        myLinkedList.add(secondNode);
+        myLinkedList.add(thirdNode);
+        myLinkedList.printMyNodes();
 	}
 
 }
