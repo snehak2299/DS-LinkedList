@@ -38,6 +38,12 @@ public class MyLinkedList<K> {
 
 
     }
+    public void popFirst(){
+    	INode temp = head.getNext();
+		head = temp;
+
+    }
+
     public void printMyNodes() {
 
         StringBuffer myNodes = new StringBuffer("My Nodes: ");
