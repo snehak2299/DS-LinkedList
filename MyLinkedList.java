@@ -38,9 +38,20 @@ public class MyLinkedList<K> {
 
 
     }
-    public void popFirst(){
-    	INode temp = head.getNext();
-		head = temp;
+ //   public void popFirst(){     //delete first element
+ //   	INode temp = head.getNext();
+//		head = temp;
+
+  //  }
+    
+    public void popLast(){    // delete last element
+        INode tempNode=this.head;
+        do
+        {
+            tempNode=tempNode.getNext();
+        }while (tempNode.getNext()==null);
+        tempNode.setNext(null);
+        
 
     }
 
