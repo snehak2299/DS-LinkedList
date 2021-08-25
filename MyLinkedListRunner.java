@@ -15,6 +15,13 @@ public class MyLinkedListRunner {
         myLinkedList.search(secondNode);
         myLinkedList.insertNodeAfter(secondNode,fourthNode);
         myLinkedList.printMyNodes();
+        System.out.println();
+        System.out.println("size of linked list before deleting node "+myLinkedList.size());
+        myLinkedList.deleteNode(40);
+        myLinkedList.printMyNodes();
+        System.out.println();
+        System.out.println("size of linked list after deleting node "+myLinkedList.size());
+ 
 	}
 
 }

@@ -79,6 +79,26 @@ public class MyLinkedList<K> {
         }
 
     }
+    public void deleteNode(K key) { //delete particular element in linked List
+		INode temp = head;
+		while (temp.getNext() != null) {
+			if ((temp.getNext().getKey()).equals(key)) {
+				INode tempLast = temp.getNext().getNext();
+				temp.setNext(tempLast);
+				break;
+			}
+			temp = temp.getNext();
+		}
+	}
+    public int size() {
+		int count = 0;
+		INode temp = head;
+		while (temp != null) {
+			count++;
+			temp = temp.getNext();
+		}
+		return count;
+	}
 
     public void printMyNodes() {
 
